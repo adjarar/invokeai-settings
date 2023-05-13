@@ -6,21 +6,17 @@
 # and the width and height of the images it
 # was trained on.
 
-variables:
-  &models_dir /home/webui/automatic/models
-  &sd_models_dir *models_dir/Stable-Diffusion
-  &vae_dir *models_dir/VAE
-stable-diffusion-1.5:
+sd-1.5-adam:
   description: Adam 1.5
-  weights: *sd_models_dir/sd1-5_adam-ep100-gs00900.ckpt
+  weights: /home/webui/automatic/models/Stable-diffusion/sd1-5_adam-ep100-gs00900.ckpt
   config: configs/stable-diffusion/v1-inference.yaml
-  vae: *vae_dir/vae-ft-mse-840000-ema-pruned.ckpt
+  vae: /home/webui/automatic/models/VAE/vae-ft-mse-840000-ema-pruned.ckpt
   width: 512
   height: 512
-inpainting-1.5:
+sd-inpainting-1.5-adam:
   description: Adam 1.5 inpainting
-  weights: *models_dir/Stable-Diffusion/sd-v1-5-adam-inpainting.ckpt
+  weights: /home/webui/automatic/models/Stable-diffusion/sd-v1-5-adam-inpainting.ckpt
   config: configs/stable-diffusion/v1-inpainting-inference.yaml
-  vae: *vae_dir/vae-ft-mse-840000-ema-pruned.ckpt
+  vae: /home/webui/automatic/models/VAE/vae-ft-mse-840000-ema-pruned.ckpt
   width: 512
   height: 512
