@@ -10,12 +10,12 @@ sd-1.5-adam:
   description: Adam 1.5
   weights: /home/webui/stable-diffusion-webui/models/Stable-diffusion/sd1-5_adam-ep100-gs00900.ckpt
   config: configs/stable-diffusion/v1-inference.yaml
-  vae: /home/webui/automatic/models/VAE/vae-ft-mse-840000-ema-pruned.ckpt
+  vae: /home/webui/stable-diffusion-webui/models/VAE/vae-ft-mse-840000-ema-pruned.ckpt
   width: 512
   height: 512
 sd-inpainting-1.5-adam:
   description: Adam 1.5 inpainting
-  weights: /home/webui/automatic/models/Stable-diffusion/sd-v1-5-adam-inpainting.ckpt
+  weights: /home/webui/stable-diffusion-webui/models/Stable-diffusion/sd-v1-5-adam-inpainting.ckpt
   config: configs/stable-diffusion/v1-inpainting-inference.yaml
   vae: /home/webui/stable-diffusion-webui/models/VAE/vae-ft-mse-840000-ema-pruned.ckpt
   width: 512
